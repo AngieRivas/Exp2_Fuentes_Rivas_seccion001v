@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Carniceria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CARRUSEL-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> messages: { email: { required: 'Ingresa tu correo electrónico', email: 'Formato de correo no válido' }, fono:{ required: 'Ingrese un número de celular', minlength: 'Cantidad de digitos insuficiente' },
+
+    <script>
+        function Cambiar() {
+            var a = prompt('Ingrese su nombre: ');
+            document.getElementById('titulocambia').innerHTML = a;
+        }
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--LOGO-->
+        <a class="navbar-brand" href="#">
+            <img src="imagenes/logo6.png" width="150" height="150" alt="" />
+        </a>
+        <div class="container">
+            <div class="collapse navbar-collapse" id="opciones">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="quienessomos.html">Quienes somos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="galeriadefotos.html">Galeria</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="cotiza.html">Cotiza</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <!--FORMULARIO-->
+
+    <form role="form">
+        <div id="formulario_coti" class="col-12 center">
+            <!--<h2 id="titulocotiza">Cotiza aquí</h2>-->
+            <h5 id="titbienvenida">Bienvenido a carnes LA: </h5>
+            <h2 id="titulocambia" onclick="Cambiar()">Pinche aqui</h2>
+            <hr>
+            <label for="Tpersona">Tipo persona:</label> <br>
+            <input type="radio" id="natural" name="tipo" value="natural">
+            <label for="natural">Persona natural (Boleta)</label><br>
+            <input type="radio" id="juridica" name="tipo" value="juridica">
+            <label for="juridica">Juridica (Factura)</label><br>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" placeholder="Ingrese nombres" id="nombre" minlength="20" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo:</label>
+                <input type="email" class="form-control " id="email " name="email " placeholder="nombre@dominio.cl " required>
+            </div>
+            <div class="form-group ">
+                <label for="telefono">Telefono</label>
+                <input type="text " name="telefono" class="form-control " placeholder="Ingrese número de telefono " id="telefono" required minlength="9">
+            </div>
+            <br>
+            <h2 id="titulodom">Datos envío a domicilio</h2>
+            <fieldset>
+                <br>
+                <label for="ciudad1 ">Seleccione ciudad</label>
+                <select name="ciudad1 " id="ciudad1 " required>
+                    <optgroup label="Arica y Parinacota ">
+                        <option value="1 ">Arica</option>
+                    </optgroup>        
+                    <optgroup label="Tarapacá ">
+                        <option value="2 ">Iquique</option>
+                    </optgroup>
+                    <optgroup label="Antofagasta ">
+                        <option value="3 ">Antofagasta</option>
+                    </optgroup>
+                    <optgroup label="Atacama ">
+                        <option value="4 ">Copiapó</option>
+                    </optgroup>
+                    <optgroup label="Coquimbo ">
+                        <option value="5 ">	La Serena</option>
+                    </optgroup>
+                    <optgroup label="Valparaíso ">
+                        <option value="6 ">Valparaíso</option>
+                    </optgroup>
+                    <optgroup label="Metropolitana ">
+                        <option value="7 ">Santiago</option>
+                    </optgroup>
+                    <optgroup label="O 'Higgins">
+                        <option value="8">Rancagua</option>
+                    </optgroup>
+                    <optgroup label="Maule">
+                        <option value="9">Talca</option>
+                    </optgroup>
+                    <optgroup label="Bío-Bío">
+                        <option value="10">Concepción</option>
+                    </optgroup>
+                    <optgroup label="La Araucanía">
+                        <option value="11">Temuco</option>
+                    </optgroup>
+                    <optgroup label="Los Ríos">
+                        <option value="12">Valdivia</option>
+                    </optgroup>
+                    <optgroup label="Los Lagos">
+                        <option value="13">Puerto Montt</option>
+                    </optgroup>
+                    <optgroup label="Aysén">
+                        <option value="14">Coyhaique</option>
+                    </optgroup>
+                    <optgroup label="Magallanes">
+                        <option value="15">Magallanes</option>
+                    </optgroup>                 
+                </select>
+                <br>
+                <br>
+                <form name="datos" method="POST" action="ejemplo.html">
+                    <label for="comuna">Seleccione comuna</label>
+                    <select name="comuna" id="comuna" required>
+                <option value="1">Algarrobo</option>
+                <option value="2">Alhué </option>
+                <option value="3">Alto Bío Bío</option>
+                <option value="4">Alto del Carmen</option>
+                <option value="5">Algarrobo</option>
+                <option value="6">Alhué </option>
+                <option value="7">Alto Bío Bío</option>
+                <option value="8">Alto del Carmen</option>
+                <option value="9">Alto Hospicio</option>
+                <option value="10">Buin </option>
+                <option value="11">Bulnes</option>
+                <option value="12">Cabo de Hornos</option>
+                <option value="12">Cabrero</option>
+                <option value="14">Calbuco </option>
+                <option value="15">Calera de Tango</option>
+                <option value="16">Cañete</option>
+                <option value="17">Estación CentralAlgarrobo</option>
+                <option value="18">Huechuraba</option>
+                <option value="19">Independencia</option>
+                <option value="20">Juan Fernández</option>
+                <option value="21">La Pintana</option>
+                <option value="22">Llanquihue </option>
+                <option value="23">Los Ángeles</option>
+                <option value="24">Los Sauces</option>
+                <option value="25">Macul</option>
+                <option value="26">Mostazal </option>
+                <option value="27">Olmué</option>
+                <option value="28">Pirque</option>
+                <option value="29">Rancagua </option>
+                <option value="30">Temuco</option>
+             </select>
+                    <div class="form-group">
+                        <label for="direccion">Direccion:</label>
+                        <input type="direccion" class="form-control" placeholder="Ingrese dirección" id="direccion" minlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ncasa">Número:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese número" id="ncasa" required minlength="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="referencia">Referencia:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese calle referencia (opcional)" id="ncasa" required>
+                    </div>
+            </fieldset>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea type="text" class="form-control" placeholder="Ingrese mensaje" id="mensaje" minlength="20" required> </textarea>
+            </div>
+
+
+            <br>
+            <div class="text-center">
+                <button type="submit" id="btnEnviar" class="btn btn-success">Enviar</button>
+            </div>
+        </div>
+
+        </form>
+        <br>
+        <br>
+        <!--Footer-->
+        <footer class=" bg-dark text-white text-lg-start py-4">
+            <div class="container">
+                <nav class="row">
+                    <ul class="col-3 list-unstyled">
+                        <li class="font-weight-bold text-uppercase">INTEGRANTES</li>
+                        <div class="text-left" style="background-color: #343a40">
+                            <a href="#" class="text-reset"></a>
+                            <i class="far fa-user"></i> Luciano Fuentes
+                            <br>
+                            <a href="#" class="text-reset"></a>
+                            <i class="far fa-user"></i> Angie Rivas
+                        </div>
+                    </ul>
+                    <ul class=" col-3 list-unstyled text-reset  ">
+                        <li class="font-weight-bold text-uppercase">Redes Sociales</li>
+                        <li>
+                            <!--facebook-->
+                            <a href="#" class="text-reset"></a>
+                            <i class="fab fa-facebook-f"></i> Venta de carnes LA
+                            <br>
+                            <!--instagram-->
+                            <a href="#" class="text-reset"></a>
+                            <i class="fab fa-instagram"></i> @ventacarnesla
+                        </li>
+                    </ul>
+                    <ul class="col-3 list-unstyled">
+                        <li class="font-weight-bold text-uppercase">Contacto</li>
+                        <div class="text-left" style="background-color: #343a40">
+                            <a href="#" class="text-reset"></a>
+                            <i class="far fa-envelope-open"></i> Mail: ventas@carnesla.cl
+                            <br>
+                            <a href="#" class="text-reset"></a>
+                            <i class="fas fa-phone-alt"></i> Telefono: (2) 6453 7654
+                            <br>
+                            <a href="cotiza.html" class="text-reset">
+                                <i class="fas fa-list"></i> Cotiza con nosotros</a>
+                            <br>
+                        </div>
+                    </ul>
+
+                </nav>
+                <div class="text-center p-3" style="background-color: #343a40">
+                    © 2020 Copyright: Derechos reservados
+                </div>
+            </div>
+        </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/57bbb7f191.js" crossorigin="anonymous"></script>
+<script>
+    src = "formulario.js"
+</script>
+
+</html>
