@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carniceria</title>
+
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <style>
+        #registro {
+            width: 500px;
+            max-width: 100%;
+            margin: auto;
+            margin-top: 60px;
+            padding: 20px;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        #titulocambia {
+            color: #d60f0f;
+            text-align: center;
+            font-family: "Arial";
+        }
+        
+        #titbienvenida {
+            color: #050505;
+            text-align: center;
+            font-family: "Arial";
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#mi-formulario").validate({
+                rules: {
+                    nombre: {
+                        required: true,
+                        nombre: true
+                    },
+
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: "required",
+                    fono: "required",
+                    fecha: "required",
+                    password2: {
+                        required: true,
+                        equalTo: "#password"
+                    }
+
+                }, //rules
+                messages: {
+                    nombre: {
+                        required: 'Ingresa tu Nombre',
+                        nombre: 'Formato de Nombre no válido'
+                    },
+
+                    email: {
+                        required: 'Ingresa tu correo electrónico',
+                        email: 'Formato de correo no válido'
+                    },
+                    password: {
+                        required: 'Ingresa una contraseña',
+                        minlength: 'Caracteres insuficientes'
+                    },
+                    password2: {
+                        required: 'Reingresa la contraseña',
+                        equalTo: 'Las contraseñas ingresadas no coinciden',
+                        minlength: 'Caracteres insuficientes'
+                    },
+                    fono: {
+                        required: 'Ingrese un número de celular',
+                        minlength: 'Cantidad de digitos insuficiente'
+                    },
+                    fecha: {
+                        required: 'Seleccione una fecha válida',
+                        min: 'Fecha no corresponde'
+                    }
+
+                } //messages
+            }); //$('#mi-formulario').validate
+        }); //function
+    </script>
+</head>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/57bbb7f191.js" crossorigin="anonymous"></script>
+
+</html>
